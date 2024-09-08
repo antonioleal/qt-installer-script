@@ -35,7 +35,7 @@ SCRIPT=qt-installer-script.sh
 mkdir -p $INSTALL_PATH
 
 # Make shure this script exists at /opt/Qt
-if ! [ -f $INSTALL_PATH/Qt-installer.sh ]; then
+if ! [ -f $INSTALL_PATH/$SCRIPT ]; then
     SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
     cd $SCRIPT_DIR
     cp $SCRIPT $INSTALL_PATH

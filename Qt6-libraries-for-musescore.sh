@@ -15,8 +15,8 @@ if [ -f $INSTALL_PATH/MaintenanceTool ]; then
         --root $INSTALL_PATH \
         --accept-licenses \
         --accept-obligations \
-        --auto-answer OverwriteTargetDirectory=Yes,telemetry-question=No \
         --accept-messages \
+        --auto-answer OverwriteTargetDirectory=Yes,telemetry-question=No \
         --confirm-command \
         install \
         qt.qt6.624.addons.qtnetworkauth \
@@ -34,4 +34,6 @@ if [ -f $INSTALL_PATH/MaintenanceTool ]; then
         qt.tools.ninja \
         qt.tools.qtcreator \
         qt.tools.qtcreator_gui
+else
+    echo "Could not find Qt's MaintenanceTool at $INSTALL_PATH, please run the qt-installer-script.sh before this script. "
 fi
