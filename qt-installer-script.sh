@@ -37,7 +37,7 @@ mkdir -p $INSTALL_PATH
 if ! [ -f $INSTALL_PATH/Qt-installer.sh ]; then
     SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
     cd $SCRIPT_DIR
-    cp Qt-installer.sh $INSTALL_PATH
+    cp qt-installer-script.sh $INSTALL_PATH
 fi
 
 cd $INSTALL_PATH
