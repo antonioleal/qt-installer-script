@@ -30,6 +30,7 @@ fi
 
 INSTALL_PATH=/opt/Qt
 INSTALLER=qt-online-installer-linux-x64-4.8.0.run
+SCRIPT=qt-installer-script.sh
 
 mkdir -p $INSTALL_PATH
 
@@ -37,7 +38,7 @@ mkdir -p $INSTALL_PATH
 if ! [ -f $INSTALL_PATH/Qt-installer.sh ]; then
     SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
     cd $SCRIPT_DIR
-    cp qt-installer-script.sh $INSTALL_PATH
+    cp $SCRIPT $INSTALL_PATH
 fi
 
 cd $INSTALL_PATH
