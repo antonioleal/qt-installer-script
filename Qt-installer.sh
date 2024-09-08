@@ -58,8 +58,8 @@ else
         --root $INSTALL_PATH \
         --accept-licenses \
         --accept-obligations \
-        --auto-answer OverwriteTargetDirectory=Yes,telemetry-question=No \
         --accept-messages \
+        --auto-answer OverwriteTargetDirectory=Yes,telemetry-question=No \
         --confirm-command \
         install \
         qt.tools.cmake \
@@ -71,5 +71,3 @@ else
     sed -i -e "s:Exec=/opt/Qt/MaintenanceTool:Exec=gksu /opt/Qt/Qt-installer.sh:" /usr/local/share/applications/Qt-MaintenanceTool.desktop
 fi
 
-#        --no-save-account \
-#        --default-answer \
