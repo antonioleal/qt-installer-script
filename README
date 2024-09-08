@@ -1,7 +1,8 @@
-Qt-installer (Deploy Qt Libraries in Slackware)
+qt-installer-script (Deploy Qt Libraries in Slackware)
 
-Qt-installer is an umbrella script to the standard Qt installer to
-simplify the installation of Qt Libraries in your Slackware system.
+qt-installer-script is an umbrella script to the standard Qt
+installer to simplify the installation of Qt Libraries in your
+Slackware system.
 
 It is provided to perform and unattended install, define a
 location (/opt/Qt) and setup a basic skeleton so you can add
@@ -16,7 +17,7 @@ To install specific Qt libraries you can either:
 2) Run a bash script that will add a set of Qt Libraries specific
    for you application.
 
-An install script example "Qt6-libraries-for-musescore.sh"
+An install script example "qt-6.2.4-libraries-for-musescore.sh"
 is provided in /opt/Qt/scripts
 
 You will still need a Qt account in order to use this script.

@@ -69,6 +69,6 @@ else
         qt.tools.qtcreator \
         qt.tools.qtcreator_gui
 
-    sed -i -e "s:Exec=/opt/Qt/MaintenanceTool:Exec=gksu /opt/Qt/Qt-installer.sh:" /usr/local/share/applications/Qt-MaintenanceTool.desktop
+    sed -i -e "s:Exec=/opt/Qt/MaintenanceTool:Exec=gksu /opt/Qt/qt-installer-script.sh:" /usr/local/share/applications/Qt-MaintenanceTool.desktop
 fi
 
