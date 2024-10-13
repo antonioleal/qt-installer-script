@@ -29,7 +29,7 @@ if [ "$(id -u)" != "0" ]; then
 fi
 
 INSTALL_PATH=/opt/Qt
-INSTALLER=qt-online-installer-linux-x64-4.8.0.run
+INSTALLER=qt-online-installer-linux-x64-4.8.1.run
 SCRIPT=qt-installer-script.sh
 
 mkdir -p $INSTALL_PATH

@@ -8,8 +8,8 @@ It is provided to perform and unattended install, define a
 location (/opt/Qt) and setup a basic skeleton so you can add
 several Qt library versions in parallel.
 
-The script will download from Qt the online installer 4.8.0
-labelled "qt-online-installer-linux-x64-4.8.0.run"
+The script will download from Qt the online installer 4.8.1
+labelled "qt-online-installer-linux-x64-4.8.1.run"
 
 To install specific Qt libraries you can either:
 1) Run the Qt MainenanceTool from the desktop menu icon
