@@ -28,48 +28,36 @@ if [ "$(id -u)" != "0" ]; then
    exit 1
 fi
 
-INSTALL_PATH=/opt/Qt
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+cd $SCRIPT_DIR
+
+QT_PATH=/opt/Qt
 INSTALLER=qt-online-installer-linux-x64-4.9.0.run
-SCRIPT=qt-installer-script.sh
-FOLDER=4.9
-
-mkdir -p $INSTALL_PATH
-
-# Make shure this script exists at /opt/Qt
-if ! [ -f $INSTALL_PATH/$SCRIPT ]; then
-    SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
-    cd $SCRIPT_DIR
-    cp $SCRIPT $INSTALL_PATH
-fi
-
-cd $INSTALL_PATH
+WGETFOLDER=4.9
 
 # Check if online installer is available, download it if not
-if ! [ -f $INSTALL_PATH/$INSTALLER ]; then
-    wget https://download.qt.io/archive/online_installers/$FOLDER/$INSTALLER
+if ! [ -f $INSTALLER ]; then
+    wget https://download.qt.io/archive/online_installers/$WGETFOLDER/$INSTALLER
     chmod +x $INSTALLER
 fi
 
-# If already installed then run the MaintenanceTool, otherwise install a basic set of tools.
+# This will install a basic set of tools.
 # You will need to run afterwards an install script for your specific set of libraries to be added Or
 # you can run this script to manually configure Qt (an Icon is also installed in your desktop menu)
-if [ -f $INSTALL_PATH/MaintenanceTool ]; then
-    $INSTALL_PATH/MaintenanceTool
-else
-    $INSTALL_PATH/$INSTALLER \
-        --root $INSTALL_PATH \
-        --accept-licenses \
-        --accept-obligations \
-        --accept-messages \
-        --auto-answer OverwriteTargetDirectory=Yes,telemetry-question=No \
-        --confirm-command \
-        install \
-        qt.tools.cmake \
-        qt.tools.maintenance \
-        qt.tools.ninja \
-        qt.tools.qtcreator \
-        qt.tools.qtcreator_gui
+./$INSTALLER \
+    --root $QT_PATH \
+    --accept-licenses \
+    --accept-obligations \
+    --accept-messages \
+    --auto-answer OverwriteTargetDirectory=Yes,telemetry-question=No \
+    --confirm-command \
+    install \
+    qt.tools.cmake \
+    qt.tools.maintenance \
+    qt.tools.ninja \
+    qt.tools.qtcreator \
+    qt.tools.qtcreator_gui
 
-    sed -i -e "s:Exec=/opt/Qt/MaintenanceTool:Exec=gksu /opt/Qt/qt-installer-script.sh:" /usr/local/share/applications/Qt-MaintenanceTool.desktop
-fi
+# make sure gksu is used when calling the /opt/Qt/MaintenanceTool
+sed -i -e "s:Exec=/opt/Qt/MaintenanceTool:Exec=gksu /opt/Qt/MaintenanceTool:" /usr/local/share/applications/Qt-MaintenanceTool.desktop
 

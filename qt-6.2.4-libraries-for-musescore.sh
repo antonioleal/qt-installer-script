@@ -29,12 +29,12 @@ if [ "$(id -u)" != "0" ]; then
 fi
 
 # Define the location where QT will be installed
-INSTALL_PATH=/opt/Qt
+QT_PATH=/opt/Qt
 
 # Install the required Libraries for MuseScore 4.4 and above
-if [ -f $INSTALL_PATH/MaintenanceTool ]; then
-    $INSTALL_PATH/MaintenanceTool \
-        --root $INSTALL_PATH \
+if [ -f $QT_PATH/MaintenanceTool ]; then
+    $QT_PATH/MaintenanceTool \
+        --root $QT_PATH \
         --accept-licenses \
         --accept-obligations \
         --accept-messages \
@@ -57,5 +57,5 @@ if [ -f $INSTALL_PATH/MaintenanceTool ]; then
         qt.tools.qtcreator \
         qt.tools.qtcreator_gui
 else
-    echo "Could not find Qt's MaintenanceTool at $INSTALL_PATH, please run the qt-installer-script.sh before this script. "
+    echo "Could not find Qt's MaintenanceTool at $QT_PATH, please run the qt-installer-script.sh before this script. "
 fi
