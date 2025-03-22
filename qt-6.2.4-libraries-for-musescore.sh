@@ -2,7 +2,7 @@
 
 # Slackware script for installing Qt 6.2.4 libraries required by MuseScore
 
-# Copyright 2024 Antonio Leal, Porto Salvo, Oeiras, Portugal
+# Copyright 2024-2025 Antonio Leal, Porto Salvo, Oeiras, Portugal
 # All rights reserved.
 #
 # Redistribution and use of this script, with or without modification, is

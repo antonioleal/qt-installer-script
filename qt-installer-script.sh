@@ -2,7 +2,7 @@
 
 # Slackware script for installing Qt libraries
 
-# Copyright 2024 Antonio Leal, Porto Salvo, Oeiras, Portugal
+# Copyright 2024-2025 Antonio Leal, Porto Salvo, Oeiras, Portugal
 # All rights reserved.
 #
 # Redistribution and use of this script, with or without modification, is
@@ -29,8 +29,9 @@ if [ "$(id -u)" != "0" ]; then
 fi
 
 INSTALL_PATH=/opt/Qt
-INSTALLER=qt-online-installer-linux-x64-4.8.1.run
+INSTALLER=qt-online-installer-linux-x64-4.9.0.run
 SCRIPT=qt-installer-script.sh
+FOLDER=4.9
 
 mkdir -p $INSTALL_PATH
 
@@ -45,7 +46,7 @@ cd $INSTALL_PATH
 
 # Check if online installer is available, download it if not
 if ! [ -f $INSTALL_PATH/$INSTALLER ]; then
-    wget https://download.qt.io/archive/online_installers/4.8/$INSTALLER
+    wget https://download.qt.io/archive/online_installers/$FOLDER/$INSTALLER
     chmod +x $INSTALLER
 fi
 
