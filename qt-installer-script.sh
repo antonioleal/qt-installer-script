@@ -32,8 +32,8 @@ SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 cd $SCRIPT_DIR
 
 QT_PATH=/opt/Qt
-INSTALLER=qt-online-installer-linux-x64-4.9.0.run
-WGETFOLDER=4.9
+INSTALLER=qt-online-installer-linux-x64-4.10.0.run
+WGETFOLDER=4.10
 
 # Check if online installer is available, download it if not
 if ! [ -f $INSTALLER ]; then
