@@ -41,6 +41,11 @@ if [ -f $QT_PATH/MaintenanceTool ]; then
         --auto-answer OverwriteTargetDirectory=Yes,telemetry-question=No \
         --confirm-command \
         install \
+        qt.tools.cmake \
+        qt.tools.maintenance \
+        qt.tools.ninja \
+        qt.tools.qtcreator \
+        qt.tools.qtcreator_gui \
         qt.qt6.624.addons.qtnetworkauth \
         qt.qt6.624.addons.qtnetworkauth.gcc_64 \
         qt.qt6.624.addons.qtscxml \
@@ -51,11 +56,14 @@ if [ -f $QT_PATH/MaintenanceTool ]; then
         qt.qt6.624.gcc_64 \
         qt.qt6.624.qt5compat \
         qt.qt6.624.qt5compat.gcc_64 \
-        qt.tools.cmake \
-        qt.tools.maintenance \
-        qt.tools.ninja \
-        qt.tools.qtcreator \
-        qt.tools.qtcreator_gui
+        qt.qt6.693.addons.qt5compat \
+        qt.qt6.693.addons.qt5compat.linux_gcc_64 \
+        qt.qt6.693.addons.qtnetworkauth \
+        qt.qt6.693.addons.qtnetworkauth.linux_gcc_64 \
+        qt.qt6.693.addons.qtscxml \
+        qt.qt6.693.addons.qtscxml.linux_gcc_64 \
+        qt.qt6.693.addons.qtshadertools \
+        qt.qt6.693.addons.qtshadertools.linux_gcc_64
 else
     echo "Could not find Qt's MaintenanceTool at $QT_PATH, please run the qt-installer-script.sh before this script. "
 fi
