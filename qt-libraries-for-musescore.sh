@@ -46,6 +46,7 @@ if [ -f $QT_PATH/MaintenanceTool ]; then
         qt.tools.ninja \
         qt.tools.qtcreator \
         qt.tools.qtcreator_gui \
+        qt.qt6.624.gcc_64 \
         qt.qt6.624.addons.qtnetworkauth \
         qt.qt6.624.addons.qtnetworkauth.gcc_64 \
         qt.qt6.624.addons.qtscxml \
@@ -53,9 +54,9 @@ if [ -f $QT_PATH/MaintenanceTool ]; then
         qt.qt6.624.doc.qt5compat \
         qt.qt6.624.doc.qtnetworkauth \
         qt.qt6.624.doc.qtscxml \
-        qt.qt6.624.gcc_64 \
         qt.qt6.624.qt5compat \
         qt.qt6.624.qt5compat.gcc_64 \
+        qt.qt6.693.linux_gcc_64 \
         qt.qt6.693.addons.qt5compat \
         qt.qt6.693.addons.qt5compat.linux_gcc_64 \
         qt.qt6.693.addons.qtnetworkauth \
