@@ -18,7 +18,7 @@ To install specific Qt libraries you can either:
    or,
 2) Run a bash script that will add a set of Qt Libraries specific
    for you application.for example the provided
-        "qt-6.2.4-libraries-for-musescore.sh"
+        "qt-libraries-for-musescore.sh"
 
 To uninstall use the /opt/Qt/MaintenanceTool
 
