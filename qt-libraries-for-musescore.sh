@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Slackware script for installing Qt 6.2.4 libraries required by MuseScore
+# Slackware script for installing Qt libraries required by MuseScore
 
 # Copyright 2024-2025 Antonio Leal, Porto Salvo, Oeiras, Portugal
 # All rights reserved.
